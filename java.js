@@ -1,18 +1,28 @@
 
 
 // for the java script component
-const cal = (length,height,width) => 
+const cal = (l,h,w) => 
 {
-    return 4*(length+height+width);
+  const a = l+h+w
+  return 4*a
 }
 document.querySelector('#calculate').addEventListener('click',(e)=>
 {
   e.preventDefault();
-    let length = parseInt(document.getElementById("length").value);
-    let height = parseInt(document.getElementById("height").value);
-    let width = parseInt(document.getElementById("width").value);
-    const per = `${cal(length,height,width)}`
-    document.getElementById('peri').innerHTML= per ;
+    let l = parseInt(document.getElementById("length").value);
+    localStorage.setItem("len", l);
+    let h = parseInt(document.getElementById("height").value);
+    localStorage.setItem("ht",h);
+    let w = parseInt(document.getElementById("width").value);
+    localStorage.setItem("wdt",w);
+    const a = parseInt(localStorage.getItem("len"));
+    console.log(a)
+    const b = parseInt(localStorage.getItem("ht"));
+    console.log(b)
+    const c = parseInt(localStorage.getItem("wdt"));
+    console.log(c)
+    //console.log(per)
+    document.getElementById('peri').innerHTML= `${cal(a,b,c)}` ;
 
 })
 
@@ -36,4 +46,34 @@ const perimeter = new Vue({
       return `${per(length, height, width)}.`
     }
   }
+})
+
+const album = 'https://jsonplaceholder.typicode.com/comments'
+let i=0;
+// fetch information
+const getalb = async () => {
+  try {
+    const response = await fetch(album)
+    const obj = await response.json()
+    console.log(`FETCHED. Response JSON ${obj[0]}`)
+    // const joke = obj.value.joke || 'No joke for you.'
+    const ab = obj[i] || 'no album'
+    i++
+    return ab
+  } catch (error) { console.error(error) }
+}
+
+// interact with DOM
+const updateWithJoke = async (event) => {
+  try {
+    document.querySelector('#result').innerHTML = ''
+    const answer = await getalb()
+    document.querySelector('#result').innerHTML = answer.email;
+    document.querySelector('#body').innerHTML = answer.body;
+
+  } catch (error) { console.error(error) }
+}
+
+document.addEventListener('click', event => {
+  if (event.target && event.target.id === 'jsonobj') { updateWithJoke(event) }
 })

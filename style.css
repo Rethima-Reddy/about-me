@@ -57,3 +57,14 @@ a {
     align-content: center;
     justify-content: center;
 }
+.fetch
+{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+#jsonobj
+{
+    width: 150px;
+
+}
