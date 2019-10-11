@@ -1,0 +1,59 @@
+#d1
+{
+    display: grid;
+    border: 2px solid #05356B;
+    border-radius: 15px;
+    align-content: center;
+    justify-content: center;
+    color: #EDF5E1;
+}
+.f1
+{
+    display: flex;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    align-content: space-around; 
+}
+body
+{
+    background-color: #5CDB95;
+}
+a {
+    color: #000000;
+    text-decoration: none;
+    background-color: transparent;
+}
+.color
+{
+    display: flex;
+    color:#05356B;
+    margin-bottom: 0;
+    align-content: center;
+    justify-content: center;
+    direction: flex-end;
+    
+}
+.color1
+{
+    color: #05356B;
+}
+
+#image1
+{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border-radius : 50%;
+}
+.contactform
+{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+.youtube
+{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}

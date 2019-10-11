@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyTemplate</title>
+    <!-- Link to css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="app">
+    <nav class="navbar navbar-expand-lg navbar-info bg-info ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse color1" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="navbar-dark navbar-brand" href="index.html">Rethima-Reddy <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calculate.html">Calculate</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 f1">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/rethima.polam"><img src="image/facebook.png" width="30"
+                                height="30"></a>
+                        <a href="https://www.linkedin.com/in/rethimareddypolam/"><img src="image/linkedin.png"
+                                width="30" height="30"></a>
+                        <a href="https://github.com/Rethima-Reddy"><img src="image/github.png" width="30"
+                                height="30"></a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </nav>
+    <div class="container-fluid c1">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+                    <br>
+                    <br>
+                    <br>
+                <div id="d1">
+                    <hr>
+                    <h2>The Java script component....!</h2>
+                    <h4>To calculate perimeter of a cuboid.....</h4>
+                    <article>
+                        <section>
+                            <form class="contactform">
+                                <b>
+                                    <div class="form-group">
+                                        <label for="length">Enter length of cube </label><br>
+                                        <input type="number" id="length" placeholder="0" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="height">Enter height of cube</label><br>
+                                        <input type="number" id="height" placeholder="0" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="width">Enter width of cube</label><br>
+                                        <input type="number" id="width" placeholder="0" min="0">
+                                    </div>
+                                    <button type="submit" id="calculate" class="btn btn-primary">Submit</button>
+                                    <br>
+                                    <h5>The perimeter value is:<label id="peri"> </label></h5>
+                                </b>
+                            </form>
+                        </section>
+                    </article>
+                </div>
+                <!--id d1-->
+            </div><!--col js component-->
+            <div class="col-lg-5">
+                <br>
+                <br>
+                <br>
+                <div id="d1">
+                    <hr>
+                    <h2>The vue component...!</h2>
+                    <h4>To calculate perimeter of a cuboid.....</h4>
+                    <article id="perimeter">
+                        <section>
+                            <form class="contactform">
+                                <b>
+                                    <div class="form-group">
+                                        <label for="length">Enter length of cube </label><br>
+                                        <input v-model="length " type="number" id="length" placeholder="0" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="height">Enter height of cube</label><br>
+                                        <input v-model="height" type="number" id="height" placeholder="0" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="width">Enter width of cube</label><br>
+                                        <input v-model="width" type="number" id="width" placeholder="0" min="0">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <br>
+                                    <h5><label>The perimeter value is: {{result}}</label></h5>
+                                </b>
+                            </form>
+                        </section>
+                    </article>
+                </div>
+                <!--id d1-->
+            </div>
+            <!--col vue-->
+            
+            <div class="col-lg-1"></div>
+            <div class="col-lg-12">
+                <hr>
+                <footer class="color">
+                    <lable>Contact me at <b>S537157@NWMISSOURI.EDU</b></lable>
+                </footer>
+            </div>
+            <!--col-->
+        </div>
+        <!--row 1-->
+    </div>
+    <!--container-->
+
+    <!-- Vue.js must be added before our custom code from https://cdnjs.com/libraries/vue -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="java.js"></script>
+</body>
+
+</html>
