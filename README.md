@@ -24,7 +24,8 @@ My name is RethimaReddy Polam pursuing masters at Northwest Missouri State Unive
 
 ![](image/Bday.jpeg)
 
-## Usefl links
+## Useful links
 - [vue code reference](https://vuejs.org/v2/guide/)
 - [json placeholder](https://jsonplaceholder.typicode.com/)
 - [ajax fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [Anil Bomma](https://github.com/anil-bomma)
