@@ -1,7 +1,7 @@
 # about-me
 ## Repository Links
 - [source repository](https://github.com/Rethima-Reddy/about-me)
-- [hosted page](https://rethima-reddy.github.io/about-me/index.html)
+- [hosted page](https://rethima-reddy.github.io/about-me/)
 
 ## About
 This page is used to give information about me and a breif explanation about the tools and languages which are required for publishing a repository with GitHub pages.
