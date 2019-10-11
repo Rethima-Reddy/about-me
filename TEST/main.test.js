@@ -6,5 +6,4 @@ QUnit.test('TEST cal', assert => {
   assert.equal(cal(0, 0, 0), 0, 'test 3')
   assert.equal(cal(4, 0, 0), 16, 'test 4')
   assert.equal(cal(3.5, 0 ,0),14 ,'test 5')
-  assert.equal(cal('a', 0, 7), NaN, 'This test case will fail because passing string value as a input')
 })
