@@ -1,31 +1,5 @@
 
 
-// for the java script component
-const cal = (l,h,w) => 
-{
-  const a = l+h+w
-  return 4*a
-}
-document.querySelector('#calculate').addEventListener('click',(e)=>
-{
-  e.preventDefault();
-    let l = parseInt(document.getElementById("length").value);
-    localStorage.setItem("len", l);
-    let h = parseInt(document.getElementById("height").value);
-    localStorage.setItem("ht",h);
-    let w = parseInt(document.getElementById("width").value);
-    localStorage.setItem("wdt",w);
-    const a = parseInt(localStorage.getItem("len"));
-    console.log(a)
-    const b = parseInt(localStorage.getItem("ht"));
-    console.log(b)
-    const c = parseInt(localStorage.getItem("wdt"));
-    console.log(c)
-    //console.log(per)
-    document.getElementById('peri').innerHTML= `${cal(a,b,c)}` ;
-
-})
-
 
 // for the vue component
 const per = (length, height, width) => { return 4*(length + width + height) }
@@ -64,7 +38,7 @@ const getcmd = async () => {
 }
 
 // interact with DOM
-const updateWithJoke = async (event) => {
+const updateWithCmd = async (event) => {
   try {
     document.querySelector('#result').innerHTML = ''
     const answer = await getcmd()
@@ -75,5 +49,5 @@ const updateWithJoke = async (event) => {
 }
 
 document.addEventListener('click', event => {
-  if (event.target && event.target.id === 'jsonobj') { updateWithJoke(event) }
+  if (event.target && event.target.id === 'jsonobj') { updateWithCmd(event) }
 })
