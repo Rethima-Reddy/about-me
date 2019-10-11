@@ -48,12 +48,12 @@ const perimeter = new Vue({
   }
 })
 
-const album = 'https://jsonplaceholder.typicode.com/comments'
+const cmd = 'https://jsonplaceholder.typicode.com/comments'
 let i=0;
 // fetch information
-const getalb = async () => {
+const getcmd = async () => {
   try {
-    const response = await fetch(album)
+    const response = await fetch(cmd)
     const obj = await response.json()
     console.log(`FETCHED. Response JSON ${obj[0]}`)
     // const joke = obj.value.joke || 'No joke for you.'
@@ -67,7 +67,7 @@ const getalb = async () => {
 const updateWithJoke = async (event) => {
   try {
     document.querySelector('#result').innerHTML = ''
-    const answer = await getalb()
+    const answer = await getcmd()
     document.querySelector('#result').innerHTML = answer.email;
     document.querySelector('#body').innerHTML = answer.body;
 
